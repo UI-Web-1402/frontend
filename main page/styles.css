@@ -1,0 +1,31 @@
+.navigation-side{
+    display: inline-flex;
+    flex-direction: column;
+
+    width: 19rem;
+    height: 64rem;
+
+    background-color: #f7f7f7;
+}
+
+.nav-web-brand{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+
+.nav-web-brand img{
+    width: 2.5rem;
+    height: 2rem;
+}
+
+.nav-web-brand p{
+    display: inline;
+    margin-left: 0.5rem;
+}
+
