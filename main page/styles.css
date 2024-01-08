@@ -14,7 +14,7 @@
     margin-top: 2rem;
     margin-left: 2rem;
 
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     font-size: 1.12rem;
 }
@@ -27,5 +27,41 @@
 .nav-web-brand p{
     display: inline;
     margin-left: 0.5rem;
+}
+
+.navigation-options{
+    display: flex;
+    flex-direction: column;
+    height: 16.5rem;
+
+    margin-top: 7rem;
+    margin-left: 2rem;
+}
+
+.nav-option{
+
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    
+    width: 15rem;
+    height: 3.5rem;
+
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.nav-option a{
+    margin-left: 0.5rem;
+    color: #626264;
+    text-decoration: none;
+}
+
+
+.nav-option:hover, .nav-option:hover a{
+    background-color: #503E9D;
+    color: #F7FAFC;
+    text-decoration: none;
+    cursor: pointer;
 }
 
