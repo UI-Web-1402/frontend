@@ -2,6 +2,11 @@
     font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+.all-page{
+    display: flex;
+}
+
 .navigation-side{
     display: flex;
     flex-direction: column;
@@ -11,6 +16,7 @@
     height: 64rem;
 
     background-color: #f7f7f7;
+    border-radius: 3rem;
 }
 
 .nav-web-brand{
@@ -73,6 +79,7 @@
 .user-info-nav{
 
     margin-left: 2rem;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,4 +106,50 @@
     font-size: 0.7rem;
     font-weight: 400;
     color: #626264;
+}
+
+.nav-top{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.nav-top .location, .nav-top .Pick-up, .nav-top .best-deals{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.nav-top .location p, .nav-top .Pick-up p, .nav-top .best-deals p{
+    margin-left: 0.2rem;
+    font-weight: 600;
+}
+
+.nav-top .location a, .nav-top .Pick-up a, .nav-top .best-deals a{
+    margin-left: 0.2rem;
+}
+
+
+.nav-top .search-bar input[type='search']{
+    width: 30rem;
+    height: 3rem;
+
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 0.7rem;
+
+    margin-left: 10rem;
+
+    background-image: url('icons/search-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 0.87rem 1rem;
+
+    margin-top: -0.4rem;
+    position: absolute;
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem;
+}
+
+.nav-top .buttons{
+    margin-top: -0.4rem;
+    margin-left: 42rem;
 }
