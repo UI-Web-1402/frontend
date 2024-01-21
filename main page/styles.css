@@ -159,19 +159,15 @@
 
 
 .featured-restaurant{
+    display: grid;
+    
     grid-row-start: 2;
     grid-column-start: 2;
-    
-    width: 67rem;
-    height: 18rem;
 
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    flex-wrap: wrap;
+    grid-template-rows: repeat(1, 1rem) (2, 18rem);
+    grid-template-columns: repeat(3, 21.8rem);
 
+    width: 80rem;
 }
 
 .featured-restaurant h3{
