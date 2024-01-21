@@ -6,7 +6,7 @@
 .all-page{
     display: grid;
     grid-template-columns: repeat(1, 19rem) repeat(1, 85rem);
-    grid-template-rows: repeat(4, 19rem);
+    grid-template-rows: repeat(4, 21rem);
 }
 
 .navigation-side{
@@ -163,7 +163,6 @@
     grid-column-start: 2;
 
     margin-left: 2rem;
-
 }
 
 
@@ -255,3 +254,35 @@
     grid-column-start: 2;
     grid-row-start: 3;
 }
+
+.food{
+
+    grid-row: 3;
+    grid-column: 2;
+
+    margin-left: 2rem;
+}
+
+.food-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78rem;
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 4;
+}
+
+.food-header h3{
+    font-weight: 700;
+    font-size: 1.5rem;   
+}
+
+.food-header #food-header-see-all{
+    color: #503E9D;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
