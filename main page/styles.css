@@ -165,15 +165,29 @@
     grid-column-start: 2;
 
     grid-template-rows: repeat(1, 1rem) (2, 18rem);
-    grid-template-columns: repeat(3, 21.8rem);
+    grid-template-columns: repeat(3, 28rem);
 
     width: 80rem;
+    margin-left: 2rem;
 }
 
-.featured-restaurant h3{
-    display: block;
+.featured-restaurant .featured-restuarant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 4;
+}
+.featured-restaurant .featured-restuarant-header h3{
     font-weight: 700;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
+}
+
+.featured-restaurant .featured-restuarant-header #featured-restuarant-header-see-all{
+    display: inline;
 }
 
 .restaurant-snapshot{
