@@ -5,8 +5,8 @@
 
 .all-page{
     display: grid;
-    grid-template-columns: repeat(1, 19rem) repeat(1, 85rem);
-    grid-template-rows: repeat(4, 21rem);
+    grid-template-columns: repeat(1, 19rem) repeat(1, 87.5rem);
+    grid-template-rows: repeat(3, 21rem);
 }
 
 .navigation-side{
@@ -232,9 +232,11 @@
     margin-left: 0.5rem;
 }
 
-.restaurant-snapshot .rest-name h5{
+.restaurant-snapshot .rest-name a{
     font-size: 1rem;
     font-weight: 700;
+    color: #182135;
+    text-decoration-line: none;
 }
 
 .restaurant-snapshot .rest-info, .restaurant-snapshot .rest-status{
