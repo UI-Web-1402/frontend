@@ -187,6 +187,7 @@
     grid-row-end: 1;
     grid-column-end: 4;
 }
+
 .featured-restuarant-header h3{
     font-weight: 700;
     font-size: 1.5rem;
@@ -194,6 +195,9 @@
 
 .featured-restuarant-header #featured-restuarant-header-see-all{
     display: inline;
+    color: #503E9D;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .restaurant-snapshot{
