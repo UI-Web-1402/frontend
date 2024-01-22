@@ -10,3 +10,33 @@
 
     grid-template-columns: repeat(1, 36rem) repeat(1, 54rem);
 }
+
+.nibble-image{
+    background-image: url('images/signin-image.svg');
+    grid-column: 1;
+}
+
+
+.create-account-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-account-form .form-welcoming{
+    margin-left: -15rem;
+    margin-bottom: 2rem;
+}
+
+.create-account-form .form-welcoming h3{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.create-account-form .form-welcoming h5{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #626264;
+    line-height: 0.1rem;
+}
