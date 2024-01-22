@@ -82,3 +82,41 @@
     outline: 0;
     border-bottom: #000 solid 0.125rem;;
 }
+
+#create-account-button{
+
+    width: 36rem;
+    height: 4rem;
+
+    background-color: #503E9D;
+    color: #F7FAFC;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    margin-top: 2rem;
+}
+
+#signin-button:hover, #create-account-button:hover{
+    cursor: pointer;
+}
+
+.signin-link-part{
+    margin-top: 1rem;
+}
+
+.signin-link-part p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #626264;
+}
+
+.signin-link-part a{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FB6D3A;
+}
