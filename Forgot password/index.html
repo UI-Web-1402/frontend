@@ -39,10 +39,26 @@
             </div>
 
             <div class="continue-buttons">
-              <button id="continue-button">Continue</button>
+              <input type="submit" id="continue-button" value="Continue" onclick="show_resend_email()"/>
             </div>
           </form>
         </div>
+      </div>
+
+      <div class="resend-form">
+        <img src="images/email-input.svg" alt="emial image">
+        <form action="#">
+          <h3>Reset email sent</h3>
+          <p>
+            We have just sent an email with a password reset link to&nbsp;
+            <span id="user-email">markclarke@gmail.com.</span>
+          </p>
+
+          <div class="resenf-form-buttons">
+            <input type="submit" value="Got it" id="got-it-btn" onclick="close_resend_email()"/>
+            <input type="submit" value="Send again" id="send-again-btn" />
+          </div>
+        </form>
       </div>
     </div>
   </body>

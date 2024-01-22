@@ -9,11 +9,13 @@
     height: 64rem;
 
     grid-template-columns: repeat(1, 36rem) repeat(1, 54rem);
+    grid-template-rows: repeat(3, 21.3rem);
 }
 
 .forget-image{
     background-image: url('images/signin-image.svg');
     grid-column: 1;
+    grid-row: 1/4;
 }
 
 .forget-password-form{
@@ -21,6 +23,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .forget-password-form .form-welcoming{
@@ -106,5 +111,68 @@
 }
 
 #continue-button:hover{
+    cursor: pointer;
+}
+
+.resend-form{
+    display: none;
+    width: 25rem;
+    height: 18.5rem;
+
+    border-radius: 1rem;
+
+    background-color: #fff;
+    text-align: center;
+    
+    grid-column: 2;
+    grid-row: 2;
+
+    margin-left: 15rem;
+}
+
+.resend-form img{
+    margin-top: 1rem;
+}
+
+.resend-form p{
+    font-size: 0.875rem;
+    color: #626264;
+}
+
+.resend-form #user-email{
+    font-weight: 700;
+    color: #182135;
+}
+
+
+.resend-form .resenf-form-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.resend-form .resenf-form-buttons input[type="submit"]{
+    width: 10.25rem;
+    height: 4rem;
+    border: 0;
+    border-radius: 1rem;
+}
+
+.resend-form .resenf-form-buttons #got-it-btn{
+    background-color: #503E9D;
+    color: #F7FAFC;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.resend-form .resenf-form-buttons #send-again-btn{
+    background-color: #F7F7F7;
+    color: #182135;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.resend-form .resenf-form-buttons #got-it-btn:hover,
+.resend-form .resenf-form-buttons #send-again-btn:hover{
     cursor: pointer;
 }
