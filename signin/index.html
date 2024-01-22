@@ -16,16 +16,47 @@
   </head>
   <body>
     <div class="all-signin">
-
       <div class="signin-image"></div>
 
       <div class="signin-form">
         <div class="form-welcoming">
           <h3>Welcome!</h3>
-          <h5>Sign in to your account to continue </h5>
+          <h5>Sign in to your account to continue</h5>
+        </div>
+
+        <div class="welcome-inputs">
+          <form action="#">
+            <div class="input-box">
+              <img src="images/email-input.svg" alt="email input" />
+              <label for="email-input">EMAIL ADDRESS</label>
+              <br />
+              <input
+                type="email"
+                name="email-input"
+                id="email-input"
+                placeholder="markclarke@gmail.com"
+              />
+            </div>
+
+            <div class="input-box">
+              <img src="images/password-image.svg" alt="password image" />
+              <label for="password-input">PASSWORD</label>
+              <br />
+              <input
+                type="password"
+                name="password-input"
+                id="password-input"
+              />
+            </div>
+
+            <div class="signin-buttons">
+              <button id="signin-button">Sign in</button>
+              <div class="forget-pass-link"><a href="#">Forgot password?</a></div>
+              <button id="create-account-button">Create an account</button>
+            </div>
+          </form>
         </div>
       </div>
-
     </div>
   </body>
 </html>
