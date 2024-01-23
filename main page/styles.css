@@ -61,12 +61,21 @@
 
     padding-left: 0.5rem;
     border-radius: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .nav-option a{
     margin-left: 0.5rem;
     color: #626264;
     text-decoration: none;
+}
+
+.nav-option-selected{
+    background-color: #503E9D;
+}
+
+.nav-option-selected a{
+    color: #F7FAFC;
 }
 
 
