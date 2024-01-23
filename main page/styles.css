@@ -234,6 +234,12 @@
     border-radius: 0.7rem;
 }
 
+.restaurant-snapshot .rest-img img{
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+}
+
 
 .restaurant-snapshot .rest-name{
     grid-column-start: 2;
