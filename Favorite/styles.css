@@ -228,6 +228,17 @@
     margin-left: -1.8rem;
 }
 
+.dishes-favorite{
+    display: none;
+
+    grid-template-rows: repeat(1, 1rem) (2, 18rem);
+    grid-template-columns: repeat(3, 28rem);
+
+    width: 80rem;
+    margin-top: 2rem;
+    margin-left: -1.8rem;
+}
+
 .restaurant-snapshot{
     width: 21rem;
     height: 6rem;

@@ -112,8 +112,14 @@
               value="Restaurants"
               class="status-selected"
               id="restaurants-btn"
+              onclick="show_favorite_restaurants()"
             />
-            <input type="submit" value="Dishes" id="dishes-btn" />
+            <input
+              type="submit"
+              value="Dishes"
+              id="dishes-btn"
+              onclick="show_favorite_dishes()"
+            />
           </form>
         </div>
 
@@ -204,7 +210,10 @@
 
           <div class="restaurant-snapshot">
             <div class="rest-img">
-              <img src="images/restaurant-logos/unknown-restaurant.png" alt="KFC restaurant" />
+              <img
+                src="images/restaurant-logos/unknown-restaurant.png"
+                alt="KFC restaurant"
+              />
             </div>
             <div class="rest-name"><a href="#">KFC</a></div>
             <div class="rest-info">
