@@ -464,10 +464,10 @@
     grid-row: 2/4;
 
     width: 30rem;
-    height: 64rem;
+    height: 60rem;
     background-color: #FFFFFF;
 
-    border-radius: 0.5rem;
+    border-radius: 1.4rem;
 
     margin-top: 2rem;
 }
@@ -491,6 +491,7 @@
 .order-trac-detail .bottom-part .delivery{
     display: flex;
     justify-content: space-between;
+    margin-left: 1rem;
 }
 
 
@@ -535,6 +536,7 @@
     align-items: center;
 
     margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .delivery-steps-info .delivery-step-status-header p{
@@ -548,6 +550,7 @@
     flex-direction: column;
     height: 12rem;
     overflow-y: auto;
+    margin-left: 1rem;
 }
 
 
@@ -581,10 +584,11 @@
 
 .call-button{
     margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .call-button button{
-    width: 30rem;
+    width: 28rem;
     height: 4rem;
 
     border: 0;
@@ -605,19 +609,20 @@
 
 .previous-order-detail{
 
-    display: flex;
+    display: none;
     flex-direction: column;
 
     grid-column: 3/5;
     grid-row: 2/4;
 
     width: 30rem;
-    height: 64rem;
+    height: 50rem;
     background-color: #FFFFFF;
 
     border-radius: 0.5rem;
 
-    margin-top: 2rem;
+    margin-top: 4rem;
+    padding: 0 1rem;
 }
 
 .previous-order-detail .upper-part{
@@ -626,6 +631,14 @@
     align-items: center;
 }
 
+.previous-order-detail .upper-part button{
+    background: none;
+    border: none;
+}
+
+.previous-order-detail .upper-part button:hover{
+    cursor: pointer;
+}
 
 .previous-order-detail .delivered-location{
     display: flex;
@@ -725,7 +738,7 @@
 
 
 .previous-order-detail input[type="submit"]{
-    width: 30rem;
+    width: 28rem;
     height: 4rem;
 
     background-color: #503E9D;
@@ -738,4 +751,9 @@
     border-radius: 0.5rem;
 
     margin-top: 4rem;
+    margin-left: 1rem;
+}
+
+.previous-order-detail input[type="submit"]:hover{
+    cursor: pointer;
 }
