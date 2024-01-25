@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders</title>
+    <link rel="icon" type="image/x-icon" href="icons/nibble-icon.svg" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="all-page">
+      <div class="navigation-side">
+        <div class="nav-web-brand">
+          <img src="icons/nibble-icon.svg" alt="nibble icon" />
+          <p>Nibble</p>
+        </div>
+
+        <div class="navigation-options">
+          <div class="nav-option">
+            <embed src="icons/home-nav-icon.svg" alt="Home icon" />
+            <a href="#">Home</a>
+          </div>
+
+          <div class="nav-option">
+            <embed src="icons/favorite-nav-icon.svg" alt="favorite icon" />
+            <a href="">Favorite</a>
+          </div>
+
+          <div class="nav-option nav-option-selected">
+            <img src="icons/orders-nav-icon.svg" alt="orders icon" />
+            <a href="">Orders</a>
+          </div>
+
+          <div class="nav-option">
+            <embed src="icons/message.svg" alt="message icon" />
+            <a href="">Messages</a>
+          </div>
+
+          <div class="nav-option">
+            <img src="icons/settings-nav-icon.svg" alt="settings icon" />
+            <a href="#">Settings</a>
+          </div>
+        </div>
+
+        <div class="user-info-nav">
+          <img
+            src="icons/user-default-image.svg"
+            alt="user user default image"
+          />
+          <div class="info">
+            <p class="info-name">Mark Clark</p>
+            <p class="info-email">markclarke@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-top">
+        <div class="location">
+          <img src="icons/location-icon.svg" alt="location icon" />
+          <p>San Francisco, California</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="Pick-up">
+          <img src="icons/Pick-icon.svg" alt="Pick up" />
+          <p>Pick up</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="best-deals">
+          <img src="icons/deals-icon.svg" alt="Best deals" />
+          <p>Best deals</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <form action="#">
+            <label for="search-bar"></label>
+            <input
+              type="search"
+              id="search-bar"
+              name="search-bar"
+              placeholder="search for anything"
+            />
+          </form>
+        </div>
+
+        <div class="buttons">
+          <a href="#"><img src="icons/filter-icon.svg" alt="filter icon" /></a>
+          <a href="#"><img src="icons/sales-icon.svg" alt="sales icon" /></a>
+        </div>
+      </div>
+
+      <div class="upcoming-orders">
+        <div class="title">
+          <h3>Upcoming Orders</h3>
+        </div>
+
+        <div class="orders-bar">
+          <div class="order-box">
+            <div class="restaurant-name">
+              <h4>McDonald’s</h4>
+            </div>
+
+            <div class="food-status">
+              <img src="icons/clock.svg" alt="clock icon" />
+              <div class="food-time">
+                <p>Estimated arrival</p>
+                <h3>60 min</h3>
+              </div>
+
+              <div class="food-button">
+                <form action="#">
+                  <input
+                    type="submit"
+                    value="Track"
+                    onclick="show_order_trac()"
+                  />
+                </form>
+              </div>
+
+              <div class="progress-food">
+                <progress value="32" max="100"></progress>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-box">
+            <div class="restaurant-name">
+              <h4>McDonald’s</h4>
+            </div>
+
+            <div class="food-status">
+              <img src="icons/clock.svg" alt="clock icon" />
+              <div class="food-time">
+                <p>Estimated arrival</p>
+                <h3>60 min</h3>
+              </div>
+
+              <div class="food-button">
+                <form action="#">
+                  <input
+                    type="submit"
+                    value="Track"
+                    onclick="show_order_trac()"
+                  />
+                </form>
+              </div>
+
+              <div class="progress-food">
+                <progress value="32" max="100"></progress>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-box">
+            <div class="restaurant-name">
+              <h4>KFC</h4>
+            </div>
+
+            <div class="food-status">
+              <img src="icons/clock.svg" alt="clock icon" />
+              <div class="food-time">
+                <p>Estimated arrival</p>
+                <h3>15 min</h3>
+              </div>
+
+              <div class="food-button">
+                <form action="#">
+                  <input
+                    type="submit"
+                    value="Track"
+                    onclick="show_order_trac()"
+                  />
+                </form>
+              </div>
+
+              <div class="progress-food">
+                <progress value="32" max="100"></progress>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="previous-orders">
+        <div class="privous-orders-title"><h3>Previous orders</h3></div>
+
+        <div class="previous-orders-list">
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>Pizza Hut</h3>
+              <div class="food-status completed-status">
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  class="details-btn"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>Carrows Restaurant</h3>
+              <div class="food-status closed-status">
+                <p>Closed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  class="details-btn"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>KFC</h3>
+              <div class="food-status completed-status">
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  class="details-btn"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>KFC</h3>
+              <div class="food-status completed-status">
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  class="details-btn"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>KFC</h3>
+              <div class="food-status completed-status">
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  class="details-btn"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+
+          <div class="previous-order-box">
+            <div class="food-title-status">
+              <h3>Pizza Hut</h3>
+              <div class="food-status completed-status">
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="food-time">
+              <div class="date">
+                <img src="icons/calender.svg" alt="calender" />
+                <p>May 24, 2020</p>
+              </div>
+
+              <div class="hour">
+                <img src="icons/mini-clock.svg" alt="clock icon" />
+                <p>11:54 PM</p>
+              </div>
+            </div>
+
+            <div class="food-particles">
+              <div class="food-particle">
+                <div class="number-of-foods"><p>3</p></div>
+                <div class="food-title"><p>Delicious Cheese Pie</p></div>
+              </div>
+              <div class="food-particle">
+                <div class="number-of-foods"><p>1</p></div>
+                <div class="food-title"><p>Peperoni Pie</p></div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <form action="#">
+                <input
+                  type="submit"
+                  value="Details"
+                  onclick="show_previous_order_detail()"
+                />
+                <input type="submit" value="Get help" class="get-help-btn" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-trac-detail">
+        <div class="upper-part">
+          <button type="button" onclick="close_order_trac()">
+            <img src="icons/close-btn.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="bottom-part">
+          <div class="delivery">
+            <div class="time-delivery">
+              <div class="time-delivery-img">
+                <img src="icons/clock-delivery.svg" alt="clock delivery icon" />
+              </div>
+              <div class="time-delivery-exp">
+                <p>Estimated arrival</p>
+                <h3>35 min</h3>
+              </div>
+            </div>
+
+            <div class="distance-delivery">
+              <div class="distance-delivery-img">
+                <img
+                  src="icons/distance-delivery.svg"
+                  alt="clock delivery icon"
+                />
+              </div>
+              <div class="distance-delivery-exp">
+                <p>Estimated Distance</p>
+                <h3>4 Km</h3>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-steps-info">
+            <div class="delivery-step-status-header">
+              <img src="icons/delivered-icon.svg" alt="deliverd icon" />
+              <p>Delivered</p>
+            </div>
+
+            <div class="delivery-all-status">
+              <div class="delivery-step">
+                <img src="icons/delivered-step-tic.svg" alt="#" />
+
+                <div class="status">
+                  <h4 class="delivered-subject">On the way</h4>
+                  <p class="delivered-time">12:48 am</p>
+                </div>
+              </div>
+
+              <div class="delivery-step">
+                <img src="icons/delivered-step-tic.svg" alt="#" />
+
+                <div class="status">
+                  <h4 class="delivered-subject">On the way</h4>
+                  <p class="delivered-time">12:48 am</p>
+                </div>
+              </div>
+
+              <div class="delivery-step">
+                <img src="icons/delivered-step-tic.svg" alt="#" />
+
+                <div class="status">
+                  <h4 class="delivered-subject">On the way</h4>
+                  <p class="delivered-time">12:48 am</p>
+                </div>
+              </div>
+
+              <div class="delivery-step">
+                <img src="icons/delivered-step-tic.svg" alt="#" />
+
+                <div class="status">
+                  <h4 class="delivered-subject">On the way</h4>
+                  <p class="delivered-time">12:48 am</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="call-button">
+            <button type="button">Call</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="previous-order-detail">
+        <div class="upper-part">
+          <h3>Order details</h3>
+          <button type="button" onclick="close_previous_order_detail()">
+            <img src="icons/close-btn.svg" alt="close button" />
+          </button>
+        </div>
+
+        <div class="delivered-location">
+          <p>Delivered to</p>
+          <h4>300 Post Street San Francisco, CA</h4>
+        </div>
+
+        <div class="order-part">
+          <div class="order-name">Pizza Hut</div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-prices">
+          <div class="price">
+            <div class="subject">Subtotal</div>
+            <div class="money">$52</div>
+          </div>
+          <div class="price">
+            <div class="subject">Delivery fee</div>
+            <div class="money">$52</div>
+          </div>
+          <div class="price">
+            <div class="subject">Total</div>
+            <div class="money">$52</div>
+          </div>
+        </div>
+
+        <form action="#">
+          <input type="submit" value="Place New Order" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
