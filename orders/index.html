@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
     <script src="script.js" defer></script>
+    <script src="api.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css?family=Open Sans"
       rel="stylesheet"
@@ -110,89 +111,12 @@
         </div>
 
         <div class="orders-bar">
-          <div class="order-box">
-            <div class="restaurant-name">
-              <h4>McDonald’s</h4>
-            </div>
 
-            <div class="food-status">
-              <img src="icons/clock.svg" alt="clock icon" />
-              <div class="food-time">
-                <p>Estimated arrival</p>
-                <h3>60 min</h3>
-              </div>
 
-              <div class="food-button">
-                <form action="#">
-                  <input
-                    type="submit"
-                    value="Track"
-                    onclick="show_order_trac()"
-                  />
-                </form>
-              </div>
 
-              <div class="progress-food">
-                <progress value="32" max="100"></progress>
-              </div>
-            </div>
-          </div>
 
-          <div class="order-box">
-            <div class="restaurant-name">
-              <h4>McDonald’s</h4>
-            </div>
 
-            <div class="food-status">
-              <img src="icons/clock.svg" alt="clock icon" />
-              <div class="food-time">
-                <p>Estimated arrival</p>
-                <h3>60 min</h3>
-              </div>
 
-              <div class="food-button">
-                <form action="#">
-                  <input
-                    type="submit"
-                    value="Track"
-                    onclick="show_order_trac()"
-                  />
-                </form>
-              </div>
-
-              <div class="progress-food">
-                <progress value="32" max="100"></progress>
-              </div>
-            </div>
-          </div>
-
-          <div class="order-box">
-            <div class="restaurant-name">
-              <h4>KFC</h4>
-            </div>
-
-            <div class="food-status">
-              <img src="icons/clock.svg" alt="clock icon" />
-              <div class="food-time">
-                <p>Estimated arrival</p>
-                <h3>15 min</h3>
-              </div>
-
-              <div class="food-button">
-                <form action="#">
-                  <input
-                    type="submit"
-                    value="Track"
-                    onclick="show_order_trac()"
-                  />
-                </form>
-              </div>
-
-              <div class="progress-food">
-                <progress value="32" max="100"></progress>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -460,86 +384,9 @@
       </div>
 
       <div class="order-trac-detail">
-        <div class="upper-part">
-          <button type="button" onclick="close_order_trac()">
-            <img src="icons/close-btn.svg" alt="" />
-          </button>
-        </div>
 
-        <div class="bottom-part">
-          <div class="delivery">
-            <div class="time-delivery">
-              <div class="time-delivery-img">
-                <img src="icons/clock-delivery.svg" alt="clock delivery icon" />
-              </div>
-              <div class="time-delivery-exp">
-                <p>Estimated arrival</p>
-                <h3>35 min</h3>
-              </div>
-            </div>
 
-            <div class="distance-delivery">
-              <div class="distance-delivery-img">
-                <img
-                  src="icons/distance-delivery.svg"
-                  alt="clock delivery icon"
-                />
-              </div>
-              <div class="distance-delivery-exp">
-                <p>Estimated Distance</p>
-                <h3>4 Km</h3>
-              </div>
-            </div>
-          </div>
-          <div class="delivery-steps-info">
-            <div class="delivery-step-status-header">
-              <img src="icons/delivered-icon.svg" alt="deliverd icon" />
-              <p>Delivered</p>
-            </div>
-
-            <div class="delivery-all-status">
-              <div class="delivery-step">
-                <img src="icons/delivered-step-tic.svg" alt="#" />
-
-                <div class="status">
-                  <h4 class="delivered-subject">On the way</h4>
-                  <p class="delivered-time">12:48 am</p>
-                </div>
-              </div>
-
-              <div class="delivery-step">
-                <img src="icons/delivered-step-tic.svg" alt="#" />
-
-                <div class="status">
-                  <h4 class="delivered-subject">On the way</h4>
-                  <p class="delivered-time">12:48 am</p>
-                </div>
-              </div>
-
-              <div class="delivery-step">
-                <img src="icons/delivered-step-tic.svg" alt="#" />
-
-                <div class="status">
-                  <h4 class="delivered-subject">On the way</h4>
-                  <p class="delivered-time">12:48 am</p>
-                </div>
-              </div>
-
-              <div class="delivery-step">
-                <img src="icons/delivered-step-tic.svg" alt="#" />
-
-                <div class="status">
-                  <h4 class="delivered-subject">On the way</h4>
-                  <p class="delivered-time">12:48 am</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="call-button">
-            <button type="button">Call</button>
-          </div>
-        </div>
+        
       </div>
 
       <div class="previous-order-detail">
