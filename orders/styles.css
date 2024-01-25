@@ -5,7 +5,7 @@
 
 .all-page{
     display: grid;
-    grid-template-columns: repeat(1, 19rem) repeat(1, 87.5rem);
+    grid-template-columns: repeat(1, 19rem) repeat(1, 57.5rem) repeat(1, 30rem);
     grid-template-rows: repeat(1, 3rem) repeat(3, 21rem);
 }
 
@@ -124,6 +124,7 @@
     align-items: flex-start;
     height: 3rem;
     margin-top: 2rem;
+    grid-column: 2/4;
 }
 
 .nav-top .location, .nav-top .Pick-up, .nav-top .best-deals{
@@ -168,10 +169,11 @@
 
 .upcoming-orders{
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 2/4;
 
     margin-top: 2rem;
     margin-left: 2rem;
+
 }
 
 .upcoming-orders h3, .previous-orders .privous-orders-title h3{
@@ -294,7 +296,7 @@
 
 .previous-orders{
     grid-row: 3;
-    grid-column: 2;
+    grid-column: 2/4;
 
     margin-left: 2rem;
     margin-top: 2rem;
