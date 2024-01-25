@@ -174,6 +174,7 @@
     margin-top: 2rem;
     margin-left: 2rem;
 
+    overflow-x: auto;
 }
 
 .upcoming-orders h3, .previous-orders .privous-orders-title h3{
@@ -189,8 +190,9 @@
 
     width: 21rem;
     height: 12rem;
-
     border-radius: 1rem;
+
+    margin: 0 1rem;
 }
 
 .order-box .restaurant-name{
@@ -274,14 +276,12 @@
 }
 
 .order-box .food-status .progress-food progress{
-    width: 20rem;
+    width: 19rem;
     border: none;
-    margin-left: 0.5rem;
     height: 0.37rem;
-
     border-radius: 1rem;
-
     background-color: #ddd;
+    margin-left: 0.5rem;
 }
 
 
@@ -309,8 +309,11 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    height: 35rem;
     
     margin-top: 0.5rem;
+    overflow-y: auto;
 }
 
 
