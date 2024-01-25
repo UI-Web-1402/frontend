@@ -454,3 +454,147 @@
     color: #FB6D3A;
 }
 
+
+.order-trac-detail{
+    grid-column: 3/5;
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+
+    width: 30rem;
+    height: 64rem;
+    background-color: #FFFFFF;
+
+    border-radius: 0.5rem;
+
+    margin-top: 2rem;
+}
+
+.order-trac-detail .upper-part{
+    background-image: url('images/order-tracking.svg');
+    height: 34.1rem;
+}
+
+.order-trac-detail .upper-part button{
+    border: 0;
+    margin-top: 0.5rem;
+    margin-left: 24rem;
+}
+
+.order-trac-detail .upper-part button:hover{
+    cursor: pointer;
+}
+
+
+.order-trac-detail .bottom-part .delivery{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.order-trac-detail .bottom-part .time-delivery, .order-trac-detail .bottom-part .distance-delivery{
+    display: grid;
+    grid-template-columns: repeat(1, 2rem) repeat(1, 8.5rem);
+    margin-top: 1rem;   
+}
+
+.order-trac-detail .bottom-part .time-delivery .time-delivery-img{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-trac-detail .bottom-part .time-delivery .time-delivery-exp{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 0.7rem;
+}
+
+
+.order-trac-detail .bottom-part .time-delivery .time-delivery-exp p, .order-trac-detail .bottom-part .distance-delivery .distance-delivery-exp p{
+    font-size: 0.875rem ;
+    font-weight: 400;
+    color: #626264;
+}
+
+.order-trac-detail .bottom-part .time-delivery .time-delivery-exp h3, .order-trac-detail .bottom-part .distance-delivery-exp h3{
+    line-height: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.delivery-steps-info .delivery-step-status-header{
+    display: flex;
+    align-items: center;
+
+    margin-top: 1rem;
+}
+
+.delivery-steps-info .delivery-step-status-header p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #626264;
+}
+
+.delivery-steps-info .delivery-all-status{
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    overflow-y: scroll;
+}
+
+
+.delivery-steps-info .delivery-all-status .delivery-step{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.delivery-steps-info .delivery-all-status .delivery-step .status{
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+
+.delivery-steps-info .delivery-all-status .delivery-step .status h4{
+    justify-self: flex-start;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.delivery-steps-info .delivery-all-status .delivery-step .status p{
+    margin-left: 15rem;
+    font-size: 1rem;
+    color: #626264;
+}
+
+
+.call-button{
+    margin-top: 1rem;
+}
+
+.call-button button{
+    width: 30rem;
+    height: 4rem;
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    background-color: #503E9D;
+    color: #FFFFFF;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.call-button button:hover{
+    cursor: pointer;
+}
