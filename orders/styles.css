@@ -547,7 +547,7 @@
     display: flex;
     flex-direction: column;
     height: 12rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
@@ -599,4 +599,143 @@
 
 .call-button button:hover{
     cursor: pointer;
+}
+
+
+
+.previous-order-detail{
+
+    display: flex;
+    flex-direction: column;
+
+    grid-column: 3/5;
+    grid-row: 2/4;
+
+    width: 30rem;
+    height: 64rem;
+    background-color: #FFFFFF;
+
+    border-radius: 0.5rem;
+
+    margin-top: 2rem;
+}
+
+.previous-order-detail .upper-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.previous-order-detail .delivered-location{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+.previous-order-detail .delivered-location p{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #FB6D3A;
+}
+
+.previous-order-detail .delivered-location h4{
+    font-size: 1rem;
+    line-height: 0;
+    font-weight: 900;
+}
+
+
+.previous-order-detail .order-part{
+    display: flex;
+    flex-direction: column;
+
+    height: 15rem;
+    margin-top: 3rem;
+    overflow-y: auto;
+}
+
+.previous-order-detail .order-part .order-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.previous-order-detail .order-part .order-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.previous-order-detail .order-part .order-item .item-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.previous-order-detail .order-part .order-item .item-count{
+    background-color: #F7F7F7;
+    color: #A3A3A4;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.3rem;
+
+    margin-right: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.previous-order-detail .order-part .item-info h5{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.previous-order-detail .order-part .item-info p{
+    font-size: 1.25rem;
+    line-height: 0;
+    font-weight: 0;
+
+    margin-left: 15rem;
+}
+
+
+.previous-order-detail .all-prices{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.previous-order-detail .all-prices .price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.previous-order-detail .all-prices .price .subject{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+.previous-order-detail input[type="submit"]{
+    width: 30rem;
+    height: 4rem;
+
+    background-color: #503E9D;
+    color: #F7FAFC;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    margin-top: 4rem;
 }
