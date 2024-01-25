@@ -174,7 +174,7 @@
     margin-left: 2rem;
 }
 
-.upcoming-orders h3{
+.upcoming-orders h3, .previous-orders .privous-orders-title h3{
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -289,7 +289,166 @@
    
   .order-box .food-status .progress-food progress::-moz-progress-bar { 
     background-color: #FB6D3A; 
-  } 
+}
 
 
+.previous-orders{
+    grid-row: 3;
+    grid-column: 2;
+
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+
+.previous-orders .previous-orders-list{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    margin-top: 0.5rem;
+}
+
+
+
+.previous-orders .previous-orders-list .previous-order-box{
+    display: grid;
+    grid-template-rows: repeat(2, 2.5rem) repeat(1, 7rem) repeat(1, 5.5rem);
+    
+    background-color: #F7F7F7;
+    border-radius: 0.9rem;
+
+    width: 21rem;
+    height: 16.3rem;
+
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+.previous-order-box .food-title-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.previous-order-box .food-title-status h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.previous-order-box .food-title-status .food-status{
+    width: 4.6rem;
+    height: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    margin-right: 0.4rem;
+
+    border-radius: 0.3rem;
+}
+
+.closed-status{
+    background-color: #FF00001A;
+    color: #FF0000;
+}
+
+.completed-status{
+    background-color: #419D3E1A;
+    color: #419D3E;
+}
+
+.previous-order-box .food-time{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+.previous-order-box .food-time .hour{
+    margin-left: 1rem;
+}
+
+.previous-order-box .food-time .date, .previous-order-box .food-time .hour{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.previous-order-box .food-time .date img, .previous-order-box .food-time .hour img{
+    margin-right: 0.5rem;
+}
+
+.previous-order-box .food-particles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.previous-order-box .food-particles .food-particle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 0.2rem;
+}
+
+.previous-order-box .food-particle .number-of-foods{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 0.5rem;
+
+    border-radius: 0.5rem;
+}
+
+
+.previous-order-box .food-particles .food-particle p{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.previous-order-box .buttons{
+    display: flex;
+}
+.previous-order-box .buttons input[type="submit"]{
+    width: 10rem;
+    height: 2.5rem;
+
+    border: 0;
+    border-radius: 0.3rem;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.previous-order-box .buttons input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.previous-order-box .buttons .details-btn{
+    background-color: #FB6D3A;
+    color: #FFFFFF;
+}
+
+.previous-order-box .buttons .get-help-btn{
+    background-color: #FB6D3A1A;
+    color: #FB6D3A;
+}
 
