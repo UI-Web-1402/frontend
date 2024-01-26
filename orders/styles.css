@@ -1143,27 +1143,6 @@
         margin-left: 27rem;
     }
 
-    .featured-restaurant{
-        display: flex; 
-        width: 35rem;
-        overflow-x: auto;
-    } 
-
-    .food-show{
-        display: flex;
-        justify-content: space-between;
-        width: 35rem;
-        overflow-x: auto;
-    }
-
-    .food .food-show .food-snapshot{
-        margin-right: 2rem;
-    }
-
-    .featured-restuarant-header, .food-header{
-        width: 33rem;
-    }
-
     .cart-part{
         grid-column: 2/3;
         grid-row: 2/4;
