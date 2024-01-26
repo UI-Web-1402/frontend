@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="icons/nibble-icon.svg" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="all-page">
+      <div class="navigation-side">
+        <div class="nav-web-brand">
+          <img src="icons/nibble-icon.svg" alt="nibble icon" />
+          <p>Nibble</p>
+        </div>
+
+        <div class="navigation-options">
+          <div class="nav-option nav-option-selected">
+            <embed src="icons/home-nav-icon.svg" alt="Home icon" />
+            <a href="#">Home</a>
+          </div>
+
+          <div class="nav-option">
+            <embed src="icons/favorite-nav-icon.svg" alt="favorite icon" />
+            <a href="">Favorite</a>
+          </div>
+
+          <div class="nav-option">
+            <img src="icons/orders-nav-icon.svg" alt="orders icon" />
+            <a href="">Orders</a>
+          </div>
+
+          <div class="nav-option">
+            <embed src="icons/message.svg" alt="message icon" />
+            <a href="">Messages</a>
+          </div>
+
+          <div class="nav-option">
+            <img src="icons/settings-nav-icon.svg" alt="settings icon" />
+            <a href="#">Settings</a>
+          </div>
+        </div>
+
+        <div class="user-info-nav">
+          <img
+            src="icons/user-default-image.svg"
+            alt="user user default image"
+          />
+          <div class="info">
+            <p class="info-name">Mark Clark</p>
+            <p class="info-email">markclarke@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-top">
+        <div class="location">
+          <img src="icons/location-icon.svg" alt="location icon" />
+          <p>San Francisco, California</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="Pick-up">
+          <img src="icons/Pick-icon.svg" alt="Pick up" />
+          <p>Pick up</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="best-deals">
+          <img src="icons/deals-icon.svg" alt="Best deals" />
+          <p>Best deals</p>
+          <a href="#"
+            ><img src="icons/open-nav-icon.svg" alt="open location"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <form action="#">
+            <label for="search-bar"></label>
+            <input
+              type="search"
+              id="search-bar"
+              name="search-bar"
+              placeholder="search for anything"
+            />
+          </form>
+        </div>
+
+        <div class="buttons">
+          <a href="#"><img src="icons/filter-icon.svg" alt="filter icon" /></a>
+          <a href="#"><img src="icons/sales-icon.svg" alt="sales icon" /></a>
+        </div>
+      </div>
+
+      <div class="restaurant-part">
+        <div class="restaurant-information">
+          <div class="restaurant-header">
+            <img src="images/restaurant-main-logo/r1.jpg" alt="" />
+
+            <div class="favorite-btn">
+              <button type="button">
+                <img src="icons/favorite-btn.svg" alt="favorite food button" />
+              </button>
+            </div>
+
+            <div class="rest-img">
+              <img
+                src="images/restaurant-logos/Burger-King.svg"
+                alt="Burger King restaurant"
+              />
+            </div>
+          </div>
+
+          <div class="restaurant-description">
+            <div class="first-row">
+              <div class="rest-name"><h3>Burger King</h3></div>
+
+              <div class="rest-status">
+                <div class="recommend free-delivry-recomend">
+                  <p>Free delivery</p>
+                </div>
+
+                <div class="recommend buy-recomend">
+                  <p>Buy 2 get 1 free</p>
+                </div>
+
+                <div class="recommend open-recommend">
+                  <p>Opens at 12 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="second-row">
+              <p>
+                It is one of the most iconic and well-recognizable fast food
+                restaurants out there which offers really amazing food and
+                drinks.
+              </p>
+            </div>
+
+            <div class="third-row">
+              <div class="sub-info-rest">
+                <img src="icons/star.svg" alt="restaurant score" />
+                <p>&nbsp;<span class="rest-score">4,4</span> (2,583)</p>
+              </div>
+
+              <div class="sub-info-rest">
+                <img src="icons/food-icon.svg" alt="food name" />
+                <p>&nbsp;Chicken</p>
+              </div>
+
+              <div class="sub-info-rest">
+                <img src="icons/money.svg" alt="price group" />
+                <p>&nbsp;$</p>
+              </div>
+
+              <div class="sub-info-rest">
+                <img
+                  src="icons/second-location.svg"
+                  alt="restaurant distance"
+                />
+                <p>
+                  &nbsp;18,6 km 4,3 km (Irving St, San Francisco, California)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rest-foods">
+          <div class="rest-filters">
+            <button type="button" class="filter-button selected-filter">
+              All
+            </button>
+            <button type="button" class="filter-button">Popular</button>
+            <button type="button" class="filter-button">Burgers</button>
+            <button type="button" class="filter-button">Drinks</button>
+            <button type="button" class="filter-button">Popular</button>
+            <button type="button" class="filter-button">Burgers</button>
+            <button type="button" class="filter-button">Drinks</button>
+            <button type="button" class="filter-button">Popular</button>
+            <button type="button" class="filter-button">Burgers</button>
+          </div>
+
+          <div class="food-snapshot">
+            <div class="food-image">
+              <img src="images/foods/pasta.jpg" alt="food image" />
+            </div>
+
+            <div class="food-status">
+              <a href="#">Delicious Cheese Pie</a>
+
+              <div class="recommend">
+                <p>Free delivery</p>
+              </div>
+            </div>
+
+            <div class="food-info">
+              <div>
+                <img src="icons/star.svg" alt="restaurant score" />
+                <p>&nbsp;4.9 (24)</p>
+              </div>
+              <div>
+                <img src="icons/food-icon.svg" alt="food name" />
+                <p>&nbsp;Pie</p>
+              </div>
+              <div>
+                <img src="icons/delivery.svg" alt="price group" />
+                <p>&nbsp;15 min</p>
+              </div>
+
+              <div class="food-favorite-btn">
+                <button type="button">
+                  <img
+                    src="icons/favorite-heart-button.png"
+                    alt="favorite food btn"
+                  />like
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-snapshot">
+            <div class="food-image">
+              <img src="images/foods/chicken.jpg" alt="food image" />
+            </div>
+
+            <div class="food-status">
+              <a href="#">Delicious Cheese Pie</a>
+
+              <div class="recommend">
+                <p>Free delivery</p>
+              </div>
+            </div>
+
+            <div class="food-info">
+              <div>
+                <img src="icons/star.svg" alt="restaurant score" />
+                <p>&nbsp;4.9 (24)</p>
+              </div>
+              <div>
+                <img src="icons/food-icon.svg" alt="food name" />
+                <p>&nbsp;Pie</p>
+              </div>
+              <div>
+                <img src="icons/delivery.svg" alt="price group" />
+                <p>&nbsp;15 min</p>
+              </div>
+
+              <div class="food-favorite-btn">
+                <button type="button">
+                  <img
+                    src="icons/favorite-heart-button.png"
+                    alt="favorite food btn"
+                  />like
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-snapshot">
+            <div class="food-image">
+              <img src="images/foods/burger.jpg" alt="food image" />
+            </div>
+
+            <div class="food-status">
+              <a href="#">Delicious Cheese Pie</a>
+
+              <div class="recommend">
+                <p>Free delivery</p>
+              </div>
+            </div>
+
+            <div class="food-info">
+              <div>
+                <img src="icons/star.svg" alt="restaurant score" />
+                <p>&nbsp;4.9 (24)</p>
+              </div>
+              <div>
+                <img src="icons/food-icon.svg" alt="food name" />
+                <p>&nbsp;Pie</p>
+              </div>
+              <div>
+                <img src="icons/delivery.svg" alt="price group" />
+                <p>&nbsp;15 min</p>
+              </div>
+
+              <div class="food-favorite-btn">
+                <button type="button">
+                  <img
+                    src="icons/favorite-heart-button.png"
+                    alt="favorite food btn"
+                  />like
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-snapshot">
+            <div class="food-image">
+              <img src="images/foods/food2.svg" alt="food image" />
+            </div>
+
+            <div class="food-status">
+              <a href="#">Delicious Cheese Pie</a>
+
+              <div class="recommend">
+                <p>Free delivery</p>
+              </div>
+            </div>
+
+            <div class="food-info">
+              <div>
+                <img src="icons/star.svg" alt="restaurant score" />
+                <p>&nbsp;4.9 (24)</p>
+              </div>
+              <div>
+                <img src="icons/food-icon.svg" alt="food name" />
+                <p>&nbsp;Pie</p>
+              </div>
+              <div>
+                <img src="icons/delivery.svg" alt="price group" />
+                <p>&nbsp;15 min</p>
+              </div>
+
+              <div class="food-favorite-btn">
+                <button type="button">
+                  <img
+                    src="icons/favorite-heart-button.png"
+                    alt="favorite food btn"
+                  />like
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
