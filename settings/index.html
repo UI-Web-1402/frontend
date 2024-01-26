@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="normalize.css" />
     <script src="script.js" defer></script>
     <script src="api.js" defer></script>
+    <script src="../common/cart.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css?family=Open Sans"
       rel="stylesheet"
@@ -101,7 +102,9 @@
 
         <div class="buttons">
           <a href="#"><img src="icons/filter-icon.svg" alt="filter icon" /></a>
-          <a href="#" onclick="show_cart_part()"><img src="icons/sales-icon.svg" alt="sales icon" /></a>
+          <a href="#" onclick="updateCartInfo();show_cart_part(); event.preventDefault()">
+            <img src="icons/sales-icon.svg" alt="sales icon" />
+          </a>
         </div>
       </div>
 
@@ -347,6 +350,7 @@
 
       <div class="cart-part">
         <div class="upper-part">
+
           <h3>My Cart</h3>
           <button type="button" onclick="close_cart_part()">
             <img src="icons/close-btn.svg" alt="close button" />
@@ -355,11 +359,11 @@
 
         <div class="delivered-location">
           <p>Delivered to</p>
-          <h4>300 Post Street San Francisco, CA</h4>
+          <h4 id="delivery-address">300 Post Street San Francisco, CA</h4>
         </div>
 
         <div class="order-part">
-          <div class="order-name">Pizza Hut</div>
+          <div class="order-name" id="cart-restaurant-name">Pizza Hut</div>
 
           <div class="order-item">
             <div class="item-count"><p>1</p></div>
@@ -430,25 +434,26 @@
               </button>
             </div>
           </div>
+
         </div>
 
         <div class="all-prices">
           <div class="price">
             <div class="subject">Subtotal</div>
-            <div class="money">$52</div>
+            <div class="money" id="cart-food-price">$52</div>
           </div>
           <div class="price">
             <div class="subject">Delivery Price</div>
-            <div class="money">$52</div>
+            <div class="money" id="cart-delivery-price">$52</div>
           </div>
           <div class="price">
             <div class="subject">Total</div>
-            <div class="money">$52</div>
+            <div class="money" id="cart-total-price">$52</div>
           </div>
         </div>
 
         <form action="#">
-          <input type="submit" value="Checkout" onclick="show_confirm_part()"/>
+          <input type="submit" value="Checkout" onclick="show_confirm_part(); event.preventDefault();" />
         </form>
       </div>
 
@@ -462,26 +467,27 @@
 
         <div class="address-box">
           <h4 class="subject-address">Street Name</h4>
-          <div class="text-address"><p>300 Post Street</p></div>
+          <div class="text-address"><p id="cart-address-street">300 Post Street</p></div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">City</h4>
-          <div class="text-address"><p>San Francisco</p></div>
+          <div class="text-address"><p id="cart-address-city">San Francisco</p></div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">State</h4>
-          <div class="text-address"><p>California</p></div>
+          <div class="text-address"><p id="cart-address-state">California</p></div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">ZIP Code</h4>
-          <div class="text-address"><p>12345</p></div>
+          <div class="text-address"><p id="cart-address-zipcode">12345</p></div>
         </div>
 
-        <button type="button">Confirm</button>
-      </div
+        <button type="button" onclick="cartCheckout(); event.preventDefault();">Confirm</button>
+      </div>
+
     </div>
   </body>
 </html>
