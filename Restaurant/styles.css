@@ -5,8 +5,8 @@
 
 .all-page{
     display: grid;
-    grid-template-columns: repeat(1, 19rem) repeat(1, 87.5rem);
-    grid-template-rows: repeat(3, 21rem);
+    grid-template-columns: repeat(1, 19rem) repeat(1, 57.5rem) repeat(1, 30rem);
+    grid-template-rows: repeat(1, 3rem) repeat(3, 21rem);
 }
 
 .navigation-side{
@@ -15,7 +15,7 @@
     justify-content: space-between;
 
     width: 19rem;
-    height: 64rem;
+    height: 100rem;
 
     background-color: #f7f7f7;
     border-radius: 3rem;
@@ -124,6 +124,7 @@
     align-items: flex-start;
     height: 3rem;
     margin-top: 2rem;
+    grid-column: 2/4;
 }
 
 .nav-top .location, .nav-top .Pick-up, .nav-top .best-deals{
@@ -164,4 +165,309 @@
 .nav-top .buttons{
     margin-top: -0.4rem;
     margin-left: 42rem;
+}
+
+.restaurant-part{
+
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 85rem;
+    height: 100rem;
+}
+
+.restaurant-information{
+    border-radius: 1.5rem;
+}
+
+
+.restaurant-information .restaurant-header{
+    display: grid;
+    grid-template-rows: repeat(4, 8.5rem);
+    grid-template-columns: repeat(3, 27rem);
+}
+
+.restaurant-information .restaurant-header img{
+    width: 81rem;
+    height: 35rem;
+    border-radius: 1.5rem;
+}
+
+.restaurant-information .restaurant-header .favorite-btn{
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.restaurant-information .restaurant-header .favorite-btn button{
+    background: none;
+    border: 0;
+}
+
+.restaurant-information .restaurant-header .favorite-btn button:hover{
+    cursor: pointer;
+}
+
+.restaurant-information .restaurant-header .favorite-btn button img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.restaurant-information .restaurant-header .rest-img{
+    grid-column: 2;
+    grid-row: 4;
+    width: 9rem;
+    height: 9rem;
+    
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    
+    background-color: #F7F7F7;
+    border-radius: 0.7rem;
+}
+
+.restaurant-information .restaurant-header .rest-img img{
+    width: 7rem;
+    height: 7rem;
+    margin: 0.9rem;
+}
+
+.restaurant-information .restaurant-description{
+
+    display: grid;
+    grid-template-rows: repeat(1, 4rem) repeat(1, 3.5rem) repeat(1, 4rem);
+
+    margin-top: 2.5rem;
+}
+
+.restaurant-information .restaurant-description .first-row{
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1;
+}
+
+.restaurant-information .restaurant-description .first-row h3{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 0;
+}
+
+
+.restaurant-information .restaurant-description .first-row .rest-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-information .restaurant-description .first-row .rest-status .recommend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8rem;
+    height: 2.5rem;
+    margin-right: 7.4rem;
+    border-radius: 0.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.free-delivry-recomend{
+    background-color: #503E9D1A;
+    color: #503E9D;
+}
+
+.buy-recomend{
+    background-color: #FB6D3A1A;
+    color: #FB6D3A;
+}
+
+.open-recommend{
+    background-color: #F7F7F7;
+    color: #182135;
+}
+
+
+.restaurant-information .restaurant-description .second-row{
+    grid-row: 2;
+    width: 35rem;
+
+    margin-top: 1rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: #626264;
+}
+
+.restaurant-information .restaurant-description .third-row{
+    display: flex;
+    justify-content: space-between;
+    width: 45rem;
+
+    margin-top: 1rem;
+}
+
+.rest-score{
+    font-weight: 700;
+    color: #182135;
+}
+
+.sub-info-rest{
+    display: flex;
+    align-items: center;
+}
+
+.sub-info-rest img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sub-info-rest p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #626264;
+}
+
+
+.rest-foods{
+    display: grid;
+    grid-template-columns: repeat(3, 27rem);
+    grid-template-rows: repeat(1, 5rem) repeat(2, 22rem);
+
+    height: 40rem;
+    overflow-y: auto;
+
+}
+
+
+.rest-foods .rest-filters{
+    grid-row: 1;
+    grid-column: 1/4;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+
+.rest-foods .rest-filters .filter-button{
+    width: 7.25rem;
+    height: 2.5rem;
+
+    border-radius: 0.7rem;
+    border: 0;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+.rest-foods .rest-filters .filter-button:hover{
+    cursor: pointer;
+}
+
+.selected-filter{
+    background-color: #503E9D;
+    color: #F7FAFC;
+}
+
+.food-snapshot{
+    display: grid;
+    grid-template-rows: repeat(1, 11rem) repeat(2, 3rem);
+    width: 21rem;
+    height: 15.3rem;
+    margin-top: 2rem;
+}
+
+.food-image{
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.food-image img{
+    width: 21rem;
+    height: 11rem;
+    border-radius: 1rem;
+}
+
+.food-snapshot .food-status{
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-snapshot .food-status a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+    text-decoration-line: none;
+}
+
+.food-snapshot .food-status a:visited{
+    color: #182135;
+    text-decoration-line: none;
+}
+
+.food-snapshot .food-status .recommend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8rem;
+    height: 1.5rem;
+    background-color: #503E9D1A;
+    border-radius: 0.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #503E9D;
+}
+
+.food-snapshot .food-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #626264;
+}
+.food-snapshot .food-info p{
+    display: inline;
+}
+
+.food-snapshot .food-info img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.food-favorite-btn button{
+    background: none;
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #626264;
+
+    margin-right: 0.5rem;
+}
+
+.food-favorite-btn button:hover{
+    cursor: pointer;
 }
