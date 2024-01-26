@@ -82,7 +82,7 @@ function updateAccount(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-
+    getAcitveAddress();
 
     getProfileData()
 
@@ -249,6 +249,7 @@ function sendUpdateOrCreateAddressRequest(data) {
             }
             else{
                 updateAddressesFromServer()
+                getAcitveAddress()
             }
         })
         .catch(error => {
@@ -269,6 +270,9 @@ function removeAddress(address_id) {
         .then(response => {
             if (!response.ok) {
                 console.error('Remove address failed.');
+            }
+            else{
+                getAcitveAddress()
             }
         })
         .catch(error => {
@@ -316,4 +320,51 @@ function saveAddresses() {
         },
         300
     )
+}
+
+
+// --------------------------------------------------------------------------------
+
+
+
+function getAcitveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function changeActiveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
