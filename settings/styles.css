@@ -384,7 +384,7 @@
     width: 25rem;
     height: 30rem;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 1rem;
 
