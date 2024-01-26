@@ -166,3 +166,63 @@
     margin-top: -0.4rem;
     margin-left: 42rem;
 }
+
+
+.settings-part{
+    grid-row: 2;
+    grid-column: 2;
+
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 67rem;
+}
+
+.settings-part .header{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.settings-part .general-settings, .settings-part .payment-settings, .settings-part .other-settings{
+    display: flex;
+    flex-direction: column;
+    width: 67rem;
+    margin-top: 1.5rem;
+}
+
+
+.settings-part .general-settings .sub-settings-header, .settings-part .payment-settings .sub-settings-header,
+.settings-part .other-settings .sub-settings-header{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #626264;
+}
+
+
+.settings-part .general-settings .sub-settings-button, .settings-part .payment-settings .sub-settings-button,
+.settings-part .other-settings .sub-settings-button{
+    display: flex;
+    align-items: center;
+    border-bottom: #A3A3A429 solid 0.05rem;
+    width: 67rem;
+    margin-top: 1.7rem;
+    padding-bottom: 0.5rem;
+}
+
+.settings-part .general-settings .sub-settings-button .sub-settings-title button, 
+.settings-part .payment-settings .sub-settings-button .sub-settings-title button,
+.settings-part .other-settings .sub-settings-button .sub-settings-title button{
+    font-size: 1rem;
+    font-weight: 700;
+    background: none;
+    border: 0;
+    width: 67rem;
+    text-align: left;
+}
+
+.sub-settings-button .sub-settings-title button:hover{
+    cursor: pointer;
+}
