@@ -100,7 +100,9 @@
 
         <div class="buttons">
           <a href="#"><img src="icons/filter-icon.svg" alt="filter icon" /></a>
-          <a href="#"><img src="icons/sales-icon.svg" alt="sales icon" /></a>
+          <a href="#" onclick="show_cart_part()"
+            ><img src="icons/sales-icon.svg" alt="sales icon"
+          /></a>
         </div>
       </div>
 
@@ -188,10 +190,6 @@
             <button type="button" class="filter-button">Burgers</button>
             <button type="button" class="filter-button">Drinks</button>
             <button type="button" class="filter-button">Popular</button>
-            <button type="button" class="filter-button">Burgers</button>
-            <button type="button" class="filter-button">Drinks</button>
-            <button type="button" class="filter-button">Popular</button>
-            <button type="button" class="filter-button">Burgers</button>
           </div>
 
           <div class="food-snapshot">
@@ -346,6 +344,144 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="cart-part">
+        <div class="upper-part">
+          <h3>My Cart</h3>
+          <button type="button" onclick="close_cart_part()">
+            <img src="icons/close-btn.svg" alt="close button" />
+          </button>
+        </div>
+
+        <div class="delivered-location">
+          <p>Delivered to</p>
+          <h4>300 Post Street San Francisco, CA</h4>
+        </div>
+
+        <div class="order-part">
+          <div class="order-name">Pizza Hut</div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+
+            <div class="delete-btn">
+              <button>
+                <img src="icons/delete-order-btn.svg" alt="delete button" />
+              </button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+
+              <div class="delete-btn">
+                <button>
+                  <img src="icons/delete-order-btn.svg" alt="delete button" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+
+            <div class="delete-btn">
+              <button>
+                <img src="icons/delete-order-btn.svg" alt="delete button" />
+              </button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+
+            <div class="delete-btn">
+              <button>
+                <img src="icons/delete-order-btn.svg" alt="delete button" />
+              </button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="item-count"><p>1</p></div>
+            <div class="item-info">
+              <h5>Large Pizza</h5>
+              <p>5$</p>
+            </div>
+
+            <div class="delete-btn">
+              <button>
+                <img src="icons/delete-order-btn.svg" alt="delete button" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-prices">
+          <div class="price">
+            <div class="subject">Subtotal</div>
+            <div class="money">$52</div>
+          </div>
+          <div class="price">
+            <div class="subject">Delivery Price</div>
+            <div class="money">$52</div>
+          </div>
+          <div class="price">
+            <div class="subject">Total</div>
+            <div class="money">$52</div>
+          </div>
+        </div>
+
+        <form action="#">
+          <input type="submit" value="Checkout" onclick="show_confirm_part()" />
+        </form>
+      </div>
+
+      <div class="confirm-address">
+        <div class="upper-part">
+          <h3>Delivery address</h3>
+          <button type="button" onclick="close_confirm_part()">
+            <img src="icons/close-btn.svg" alt="close button" />
+          </button>
+        </div>
+
+        <div class="address-box">
+          <h4 class="subject-address">Street Name</h4>
+          <div class="text-address"><p>300 Post Street</p></div>
+        </div>
+
+        <div class="address-box">
+          <h4 class="subject-address">City</h4>
+          <div class="text-address"><p>San Francisco</p></div>
+        </div>
+
+        <div class="address-box">
+          <h4 class="subject-address">State</h4>
+          <div class="text-address"><p>California</p></div>
+        </div>
+
+        <div class="address-box">
+          <h4 class="subject-address">ZIP Code</h4>
+          <div class="text-address"><p>12345</p></div>
+        </div>
+
+        <button type="button">Confirm</button>
       </div>
     </div>
   </body>

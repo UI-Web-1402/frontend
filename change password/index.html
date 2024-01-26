@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Password</title>
+    <link rel="icon" type="image/x-icon" href="icons/nibble-icon.svg" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="change-password">
+      <div class="nibble-image"></div>
+
+      <div class="change-password-form">
+        <div class="form-welcoming">
+          <h3>Change Password</h3>
+          <h5>Plese enter your email & New password</h5>
+        </div>
+
+        <div class="change-password-inputs">
+          <form action="#">
+
+            <div class="input-box">
+              <img src="images/password-image.svg" alt="password image" />
+              <label for="password-input">NEW PASSWORD</label>
+              <br />
+              <input
+                type="password"
+                name="password-input"
+                id="password-input"
+              />
+            </div>
+
+            <div class="input-box">
+              <img src="images/password-image.svg" alt="password image" />
+              <label for="repeat-password-input">REPEAT NEW PASSWORD</label>
+              <br />
+              <input
+                type="password"
+                name="repeat-password-input"
+                id="repeat-password-input"
+              />
+            </div>
+
+            <div class="change-password-buttons">
+              <input
+                type="submit"
+                id="change-password-button"
+                value="Set"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
