@@ -176,3 +176,26 @@
 .resend-form .resenf-form-buttons #send-again-btn:hover{
     cursor: pointer;
 }
+
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+
+    .all-forget-password{
+        display: grid;
+        grid-template-columns: repeat(1, 48rem);
+        grid-template-rows: repeat(1, 22rem) repeat(1, 38rem);
+        width: 48rem;
+    }
+
+    .forget-image{
+        background-image: url('images/horizental-nibble-image.svg');
+        background-repeat: no-repeat;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .forget-password-form{
+        grid-row: 2 ;
+        grid-column: 1;
+    }
+}
