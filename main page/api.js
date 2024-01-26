@@ -1,4 +1,15 @@
 
+function GetAccessToken() {
+  const accessToken = localStorage.getItem('access_token');
+
+  if (!accessToken) {
+      console.error('Access token not found in local storage');
+      return;
+  }
+  return accessToken;
+}
+
+
 function CreateRestaurantItem(id,name, score, rating_counts, category, image_src){
     item = `          
     <div class="restaurant-snapshot">
@@ -60,6 +71,7 @@ function CreateFoodItem(id,name, delivery_pirce, image_src){
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  getAcitveAddress()
   const accessToken = localStorage.getItem('access_token');
 
   if (!accessToken) {
@@ -133,3 +145,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
   );
+
+
+  function getAcitveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function changeActiveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
