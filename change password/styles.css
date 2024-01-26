@@ -1,0 +1,12 @@
+*{
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.all-signin{
+    display: grid;
+    width: 90rem;
+    height: 64rem;
+
+    grid-template-columns: repeat(1, 36rem) repeat(1, 54rem);
+}
