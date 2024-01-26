@@ -364,7 +364,7 @@
 
 .cart-part{
 
-    display: flex;
+    display: none;
     flex-direction: column;
 
     grid-column: 2/5;
