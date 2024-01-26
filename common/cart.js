@@ -1,4 +1,12 @@
+function GetAccessToken() {
+    const accessToken = localStorage.getItem('access_token');
 
+    if (!accessToken) {
+        console.error('Access token not found in local storage');
+        return;
+    }
+    return accessToken;
+}
 
 function removeFoodFromCart(food_id) {
 
