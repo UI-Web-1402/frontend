@@ -234,8 +234,11 @@
     grid-template-rows: repeat(1, 1rem) (2, 18rem);
     grid-template-columns: repeat(3, 28rem);
 
-    width: 80rem;
+    width: 86rem;
+    height: 50rem;
     margin-top: 5rem;
+
+    overflow-y: auto;
 }
 
 .restaurant-snapshot{
