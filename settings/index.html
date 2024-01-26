@@ -119,7 +119,9 @@
               />
             </div>
             <div class="sub-settings-title">
-              <button type="button" onclick="show_personal_settings()">Personal information</button>
+              <button type="button" onclick="show_personal_settings()">
+                Personal information
+              </button>
             </div>
           </div>
 
@@ -269,14 +271,67 @@
                   <img src="icons/settings-phone.svg" alt="password image" />
                   <label for="Phone-input">Phone</label>
                   <br />
-                  <input type="text" name="Phone-input" id="Phone-input" />
+                  <input type="text" name="Phone-input" id="phone-input" />
                 </div>
 
-                <div class="create-account-buttons">
+                <div class="update-account-buttons">
                   <input
                     type="submit"
                     id="Update-profile-button"
                     value="Update Profile"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="saved-address-edit">
+        <div class="saved-address-edit-header">
+          <div><h3>Saved addresses</h3></div>
+          <div>
+            <button type="button" onclick="close_saved_address_settings()">
+              <img src="icons/close-btn.svg" alt="close button" />
+            </button>
+          </div>
+        </div>
+
+        <div class="information-edit">
+          <div><h4>Addresses</h4></div>
+
+          <div class="information-form">
+            <div class="information-form-inputs">
+              <form action="#">
+                <div class="input-box">
+                  <img src="icons/home_address.svg" alt="Home address input" />
+                  <label for="home-address">Address</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="home-address"
+                    id="home-address"
+                    placeholder="775 Cletus Estates Suite 423"
+                  />
+                </div>
+
+                <div class="input-box">
+                  <img src="icons/work_address.svg" alt="work address input" />
+                  <label for="work-address">Address</label>
+                  <br />
+                  <input
+                    type="email"
+                    name="work-address"
+                    id="work-address"
+                    placeholder="775 Cletus Estates Suite 423"
+                  />
+                </div>
+
+                <div class="saved-address-buttons">
+                  <input
+                    type="submit"
+                    id="saved-address-button"
+                    value="Saved Addresses"
                   />
                 </div>
               </form>

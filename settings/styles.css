@@ -234,7 +234,7 @@
     width: 25rem;
     height: 42.8rem;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 1rem;
 
@@ -248,9 +248,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.personal-edit .personal-edit-header{
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -355,12 +352,12 @@
     margin-left: 3em;
 }
 
-#text-input:focus, #email-input:focus, #phone-input:focus{
+#text-input:focus, #email-input:focus, #phone-input:focus, #home-address:focus, #work-address:focus{
     outline: 0;
     border-bottom: #000 solid 0.125rem;;
 }
 
-#Update-profile-button{
+#Update-profile-button, #saved-address-button{
 
     width: 25rem;
     height: 4rem;
@@ -377,7 +374,46 @@
     margin-top: 2rem;
 }
 
-#Update-profile-button:hover{
+#Update-profile-button:hover, #saved-address-button:hover{
     cursor: pointer;
 }
 
+.saved-address-edit{
+    grid-row: 2;
+    grid-column: 3;
+    width: 25rem;
+    height: 30rem;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    margin-top: 5rem;
+    background-color: #F7F7F7;
+}
+
+
+.saved-address-edit .saved-address-edit-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.saved-address-edit .saved-address-edit-header button{
+    background: none;
+    border: 0;
+}
+
+.saved-address-edit .saved-address-edit-header button:hover{
+    cursor: pointer;
+}
+
+.saved-address-edit .information-edit{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
