@@ -1,10 +1,17 @@
-function getProfileData() {
+function GetAccessToken() {
     const accessToken = localStorage.getItem('access_token');
 
     if (!accessToken) {
         console.error('Access token not found in local storage');
         return;
     }
+    return accessToken;
+}
+
+
+function getProfileData() {
+    const accessToken = GetAccessToken()
+
 
     const profileDetailUrl = 'http://127.0.0.1:8000/api/user/account/detail/';
 
@@ -27,7 +34,7 @@ function getProfileData() {
             if (data.profile_photo) {
                 document.querySelector('#profile-image').src = `http://127.0.0.1:8000${data.profile_photo}`
             }
-            else{
+            else {
                 document.querySelector('#profile-image').src = `icons/user-default-image.svg`
             }
 
@@ -83,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const UpdateAccountButton = document.getElementById('Update-profile-button');
     UpdateAccountButton.addEventListener('click', updateAccount);
-
-
-
 
 
 
@@ -167,3 +171,149 @@ document.addEventListener('DOMContentLoaded', function () {
 
 }
 );
+
+
+
+
+// --------------------------------------------------------------------------------
+
+
+function updateAddressesFromServer() {
+    const accessToken = GetAccessToken()
+
+
+    const profileDetailUrl = 'http://127.0.0.1:8000/api/user/account/address/';
+
+    fetch(profileDetailUrl, {
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+
+            data.forEach(item => {
+                if (item.type === 'home') {
+                    document.querySelector('#home-address').value = `${item.street_name} // ${item.city} // ${item.state} // ${item.zip_code}`;
+                    document.querySelector('#home-address').AId = item.id;
+                }
+                if (item.type === 'work') {
+                    document.querySelector('#work-address').value = `${item.street_name} // ${item.city} // ${item.state} // ${item.zip_code}`;
+                    document.querySelector('#work-address').AId = item.id;
+                }
+
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+
+function parseAddressInputValues(value) {
+
+    let splitText = value.split(" // ");
+
+    if (splitText.length !== 4) {
+        alert("The address should be in the format 'street // city // state // zipcode'. Please enter a valid address.");
+        return false;
+    } else {
+        return {
+            street_name: splitText[0],
+            city: splitText[1],
+            state: splitText[2],
+            zip_code: splitText[3]
+        }
+    }
+
+
+}
+
+
+function sendUpdateOrCreateAddressRequest(data) {
+    fetch('http://127.0.0.1:8000/api/user/account/address/', {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.error('Save new addresses failed.');
+            }
+            else{
+                updateAddressesFromServer()
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+}
+
+
+
+function removeAddress(address_id) {
+    fetch(`http://127.0.0.1:8000/api/user/account/address/detail/${address_id}/`, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.error('Remove address failed.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+function saveAddresses() {
+    let home_address_input = document.querySelector('#home-address').value.trim();
+    let work_address_input = document.querySelector('#work-address').value.trim();
+
+    if (home_address_input) {
+        let data = parseAddressInputValues(home_address_input);
+        if (data) {
+            data.type = 'home';
+            sendUpdateOrCreateAddressRequest(data);
+        }
+    }
+    else {
+        let address_id = document.querySelector('#home-address').AId;
+        if (address_id) {
+            removeAddress(address_id);
+        }
+    }
+
+
+    setTimeout(
+
+        function () {
+            if (work_address_input) {
+                let data = parseAddressInputValues(work_address_input);
+                if (data) {
+                    data.type = 'work';
+                    sendUpdateOrCreateAddressRequest(data);
+                }
+            }
+            else {
+                let address_id = document.querySelector('#work-address').AId;
+                if (address_id) {
+                    removeAddress(address_id);
+                }
+            }
+            
+        },
+        300
+    )
+}

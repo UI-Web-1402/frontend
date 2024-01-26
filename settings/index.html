@@ -134,7 +134,7 @@
               />
             </div>
             <div class="sub-settings-title">
-              <button type="button" onclick="show_saved_address_settings()">
+              <button type="button" onclick="updateAddressesFromServer();show_saved_address_settings()">
                 Saved addresses
               </button>
             </div>
@@ -336,6 +336,7 @@
                     type="submit"
                     id="saved-address-button"
                     value="Saved Addresses"
+                    onclick="saveAddresses(); event.preventDefault();"
                   />
                 </div>
               </form>
