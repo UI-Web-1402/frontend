@@ -180,6 +180,10 @@
 
 @media only screen and (min-width:321px) and (max-width:768px) {
 
+    html{
+        font-size: 10.8px;
+    }
+
     .all-forget-password{
         display: grid;
         grid-template-columns: repeat(1, 48rem);
@@ -190,6 +194,7 @@
     .forget-image{
         background-image: url('images/horizental-nibble-image.svg');
         background-repeat: no-repeat;
+        background-size: 100% 100%;
         grid-row: 1;
         grid-column: 1;
     }
@@ -197,5 +202,22 @@
     .forget-password-form{
         grid-row: 2 ;
         grid-column: 1;
+    }
+
+    .resend-form{
+        display: none;
+        width: 27rem;
+        height: 20rem;
+    
+        border-radius: 1rem;
+    
+        background-color: #fff;
+        text-align: center;
+        
+        grid-column: 1;
+        grid-row: 2;
+    
+        margin-left: 10rem;
+        margin-top: 5rem;
     }
 }
