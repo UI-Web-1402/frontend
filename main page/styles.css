@@ -435,6 +435,13 @@
     width: 10rem;
 }
 
+#promo-code-input{
+    width: 15rem;
+    height: 2.85rem;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
 
 .cart-part .order-part{
     display: flex;
