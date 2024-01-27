@@ -281,6 +281,17 @@
 
         </div>
 
+        <div class="discount-part">
+          <div class="field-name">
+            <img src="icons/discount-icon.svg" alt="discount icon" />
+            <h4>Promo code</h4>
+          </div>
+
+          <input type="text" name="promo-code-input" id="promo-code-input">
+
+          <button type="button"><img src="icons/add-promo-code-icon.svg" alt="add discount code"></button>
+        </div>
+
         <div class="all-prices">
           <div class="price">
             <div class="subject">Subtotal</div>
@@ -311,22 +322,50 @@
 
         <div class="address-box">
           <h4 class="subject-address">Street Name</h4>
-          <div class="text-address"><p id="cart-address-street">300 Post Street</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="street-name-input"
+              id="street-name-input"
+              placeholder="300 Post Street"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">City</h4>
-          <div class="text-address"><p id="cart-address-city">San Francisco</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="city-name-input"
+              id="city-name-input"
+              placeholder="San Francisco"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">State</h4>
-          <div class="text-address"><p id="cart-address-state">California</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="state-name-input"
+              id="state-name-input"
+              placeholder="California"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">ZIP Code</h4>
-          <div class="text-address"><p id="cart-address-zipcode">12345</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="zip-code-input"
+              id="zip-code-input"
+              placeholder="12345"
+            />
+          </div>
         </div>
 
         <button type="button" onclick="cartCheckout(); event.preventDefault();">Confirm</button>
