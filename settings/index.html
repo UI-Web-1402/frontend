@@ -100,7 +100,9 @@
 
         <div class="buttons">
           <a href="#"><img src="icons/filter-icon.svg" alt="filter icon" /></a>
-          <a href="#" onclick="show_cart_part()"><img src="icons/sales-icon.svg" alt="sales icon" /></a>
+          <a href="#" onclick="show_cart_part()"
+            ><img src="icons/sales-icon.svg" alt="sales icon"
+          /></a>
         </div>
       </div>
 
@@ -435,9 +437,11 @@
             <h4>Promo code</h4>
           </div>
 
-          <input type="text" name="promo-code-input" id="promo-code-input">
+          <input type="text" name="promo-code-input" id="promo-code-input" />
 
-          <button type="button"><img src="icons/add-promo-code-icon.svg" alt="add discount code"></button>
+          <button type="button">
+            <img src="icons/add-promo-code-icon.svg" alt="add discount code" />
+          </button>
         </div>
 
         <div class="all-prices">
@@ -470,26 +474,54 @@
 
         <div class="address-box">
           <h4 class="subject-address">Street Name</h4>
-          <div class="text-address"><p>300 Post Street</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="street-name-input"
+              id="street-name-input"
+              placeholder="300 Post Street"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">City</h4>
-          <div class="text-address"><p>San Francisco</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="city-name-input"
+              id="city-name-input"
+              placeholder="San Francisco"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">State</h4>
-          <div class="text-address"><p>California</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="state-name-input"
+              id="state-name-input"
+              placeholder="California"
+            />
+          </div>
         </div>
 
         <div class="address-box">
           <h4 class="subject-address">ZIP Code</h4>
-          <div class="text-address"><p>12345</p></div>
+          <div class="text-address">
+            <input
+              type="text"
+              name="zip-code-input"
+              id="zip-code-input"
+              placeholder="12345"
+            />
+          </div>
         </div>
 
         <button type="button">Confirm</button>
-      </div
+      </div>
     </div>
   </body>
 </html>
