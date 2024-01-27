@@ -1,3 +1,13 @@
+function GetAccessToken() {
+  const accessToken = localStorage.getItem('access_token');
+
+  if (!accessToken) {
+      console.error('Access token not found in local storage');
+      return;
+  }
+  return accessToken;
+}
+
 
 function CreateRestaurantItem(id, name, score, rating_counts, category, image_src) {
   item = `          
@@ -5,7 +15,7 @@ function CreateRestaurantItem(id, name, score, rating_counts, category, image_sr
     <div class="rest-img">
       <img src="http://127.0.0.1:8000${image_src}" alt="${name} restaurant" />
     </div>
-    <div class="rest-name"><a href="#">${name}</a></div>
+    <div class="rest-name"><a href="http://127.0.0.1:5051/Restaurant/?id=${id}">${name}</a></div>
     <div class="rest-info">
       <img src="icons/star.svg" alt="restaurant score" />
       <p>&nbsp;${score} (${rating_counts})</p>
@@ -75,7 +85,7 @@ function CreateFoodItem(id, name, delivery_pirce, image_src, score, rating_count
     </div>
 
     <div class="food-status">
-      <a href="#">${name}</a>
+      <a href="#" onclick="addFoodToCart(${id}); event.preventDefault();">${name}</a>
 
       <div class="recommend">
         <p>${delivery_pirce} delivery</p>
@@ -158,6 +168,7 @@ function UpdateFavoriteFoodList() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  getAcitveAddress()
   const accessToken = localStorage.getItem('access_token');
 
   if (!accessToken) {
@@ -201,3 +212,48 @@ document.addEventListener('DOMContentLoaded', function () {
     UpdateFavoriteFoodList();
 }
 );
+
+
+
+function getAcitveAddress(){
+  fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+      method: 'GET',
+      headers: {
+          'Authorization': `Bearer ${GetAccessToken()}`,
+      }
+  })
+      .then(response => {
+          if (response.status === 400) {
+              document.querySelector('#active-address').innerText = "Does not have active address";
+          }
+          return response.json();
+      })
+      .then(data => {
+          document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+}
+
+function changeActiveAddress(){
+  fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+      method: 'POST',
+      headers: {
+          'Authorization': `Bearer ${GetAccessToken()}`,
+      }
+  })
+      .then(response => {
+          if (response.status === 400) {
+              document.querySelector('#active-address').innerText = "Does not have active address";
+          }
+          return response.json();
+      })
+      .then(data => {
+          document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+}
+
