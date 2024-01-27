@@ -242,7 +242,6 @@
 
     display: grid;
     grid-template-rows: repeat(1, 4rem) repeat(1, 3.5rem) repeat(1, 4rem);
-
     margin-top: 2.5rem;
 }
 
@@ -730,4 +729,259 @@
 
 .confirm-address button:hover{
     cursor: pointer;
+}
+
+
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+
+    html{
+        font-size: 16px;
+    }
+
+    .all-page{
+        display: grid;
+        grid-template-columns: repeat(1, 5rem) repeat(1, 40rem);
+        grid-template-rows: repeat(1, 3rem) repeat(3, 21rem);
+    }
+
+    .navigation-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        width: 5rem;
+        height: 64rem;
+
+        border-radius: 0;
+    
+        background-color: #f7f7f7;
+    }
+
+    .nav-web-brand{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+     
+        font-weight: 700;
+        font-size: 1.12rem;
+    }
+
+    .nav-web-brand p{
+        display: none;
+    }
+
+    .navigation-options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 22rem;
+    
+        margin-top: -20rem;
+        margin-right: 3rem;
+    }
+
+    .nav-option{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 3rem;
+        height: 3rem;
+    
+        border-radius: 0.4rem;
+
+        margin-left: 1rem;
+        margin-top: 2rem;
+        padding-left: 0;
+    }
+
+    .nav-option a{
+        display: none;
+    }
+
+    .user-info-nav{
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .user-info-nav img{
+        width: 3rem;
+        height: 3rem;
+        margin-left: -1rem;
+    }
+
+    .user-info-nav .info{
+        display: none;
+    }
+
+    .nav-top{
+        margin-left: 2rem;
+    }
+    
+    .nav-top .location, .nav-top .Pick-up, .nav-top .best-deals{
+        display: none;
+    }
+
+    .nav-top .search-bar input[type='search']{
+        width: 25rem;
+        height: 3rem;
+    
+        background-color: #F7F7F7;
+        border: none;
+        border-radius: 0.7rem;
+
+        margin-left: -0.5rem;
+    
+    
+        background-image: url('icons/search-icon.svg');
+        background-repeat: no-repeat;
+        background-position: 0.87rem 1rem;
+    
+        margin-top: -0.4rem;
+        position: absolute;
+        padding: 0.75rem 1.25rem 0.75rem 2.5rem;
+    }
+
+    .nav-top .buttons{
+        margin-top: -0.4rem;
+        margin-left: 27rem;
+    }
+
+    .cart-part{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        margin-left: 5rem;
+    }
+
+
+    .confirm-address{
+        grid-column: 2/5;
+        grid-row: 3/4;
+        margin-left: 5rem;
+        background-color: #F7F7F7;
+    }
+
+    .restaurant-information .restaurant-header{
+        display: grid;
+        grid-template-rows: repeat(4, 3rem);
+        grid-template-columns: repeat(3, 11rem);
+    }
+    
+    .restaurant-information .restaurant-header img{
+        width: 34rem;
+        height: 14rem;
+        border-radius: 1.5rem;
+    }
+
+    
+    .restaurant-information .restaurant-header .rest-img{
+        grid-column: 2;
+        grid-row: 5;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .restaurant-information .restaurant-header .rest-img img{
+        width: 4rem;
+        height: 4rem;
+        margin: 0.5rem;
+    }
+
+    .restaurant-information .restaurant-header .favorite-btn button img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .restaurant-information .restaurant-description{
+
+        display: grid;
+        grid-template-rows: repeat(1, 6rem) repeat(1, 5rem) repeat(1, 4rem);
+        margin-top: 1rem;
+    }
+
+    .restaurant-information .restaurant-description .first-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-row: 1;
+    }
+
+    .restaurant-information .restaurant-description .first-row .rest-status .recommend{
+        margin-right: 3rem;
+    }
+
+    .restaurant-information .restaurant-description .second-row{
+        width: 32rem;
+        margin-top: 1.5rem;
+    }
+
+    .restaurant-information .restaurant-description .third-row{
+
+        flex-wrap: wrap;
+        width: 32rem;    
+        margin-top: 1rem;
+    }
+    
+
+    .rest-foods{
+        display: flex;
+        flex-direction: column  ;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    
+        height: 40rem;
+        width: 35rem;
+        overflow-x: auto;
+
+        margin-top: 2rem;
+    }
+    
+    
+    .rest-foods .rest-filters{
+        grid-row: 1;
+        grid-column: 1/4;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    
+        margin-top: 2rem;
+        margin-right: 1rem;
+    }
+
+    .food-snapshot{
+        display: grid;
+        grid-template-rows: repeat(1, 17rem) repeat(2, 4rem);
+        width: 33rem;
+        height: 22rem;
+        margin-top: 3rem;
+    }
+
+    .food-snapshot .food-status{
+        grid-row: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .food-image{
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+     
+    .food-image img{
+        width: 33rem;
+        height: 19rem;
+        border-radius: 1rem;
+    }
 }
