@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const signinButton = document.getElementById("signin-button");
-
     signinButton.addEventListener("click", async function (event) {
         event.preventDefault();
 
@@ -53,5 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error("Error during API request:", error);
         }
+    });
+
+
+    const newAccountButton = document.getElementById("create-account-button");
+    newAccountButton.addEventListener('click', function(){
+        let link = document.createElement('a');
+        link.href = "../create account/index.html";
+        link.target = '_blank'
+        link.click();
     });
 });
