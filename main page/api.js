@@ -57,7 +57,7 @@ function CreateFoodItem(id,name, delivery_pirce, image_src){
       <img src="http://127.0.0.1:8000${image_src}" alt="${name} image" />
     </div>
     <div class="food-status">
-      <a href="#">${name}</a>
+      <a href="#" onclick="addFoodToCart(${id}); event.preventDefault();">${name}</a>
 
       <div class="recommend">
         <p>${delivery_pirce} delivery</p>
@@ -187,4 +187,29 @@ function changeActiveAddress(){
         .catch(error => {
             console.error('Error:', error);
         });
+}
+
+
+function addFoodToCart(food_id) {
+  const CartDetailUrl = `http://127.0.0.1:8000/api/restaurants/cart/add/${food_id}/`;
+
+
+
+  fetch(CartDetailUrl, {
+      headers: {
+          'Authorization': `Bearer ${GetAccessToken()}`,
+          'Content-Type': 'application/json',
+      },
+      method: "POST"
+  })
+      .then(response => {
+          if (response.status !== 200) {
+              alert("Invalid food for current cart.")
+          }
+          else {
+              updateCartInfo();
+          }
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
 }
