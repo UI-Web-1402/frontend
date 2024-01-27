@@ -3,7 +3,7 @@
 }
 
 
-.change-password{
+.change-password-form{
     display: grid;
     width: 90rem;
     height: 64rem;
@@ -46,7 +46,7 @@
 }
 
 
-.change-password-form .change-password-inputs .input-box{
+.change-password-form .input-box{
     display: grid;
     grid-template-columns: repeat(1, 4rem) repeat(1, 30.75rem);
     grid-template-rows: repeat(1, 1.5rem) repeat(1, 3rem);
@@ -101,4 +101,38 @@
 
 #signin-button:hover, #change-password-button:hover{
     cursor: pointer;
+}
+
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+    .change-password{
+        display: grid;
+        grid-template-columns: repeat(1, 41rem);
+        grid-template-rows: repeat(1, 22rem) repeat(1, 25rem);
+        width: 42rem;
+    }
+
+    .change-password-form{
+        display: flex;
+        flex-direction: column;
+        width: 41rem;
+        height: 25rem;
+        grid-template-columns: none;
+    }
+
+    .change-password .nibble-image{
+        background-image: url('images/horizental-nibble-image.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-row: 1/2;
+        grid-column: 1;
+    }
+
+    .change-password-form-form{
+        grid-row: 2 ;
+    }
+
+    .change-password-form .change-password-inputs .input-box{
+        margin-top: 2rem;
+    }
 }
