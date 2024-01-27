@@ -131,3 +131,30 @@
     cursor: pointer;
 }
 
+
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+
+    html{
+        font-size: 10.8px;
+    }
+
+    .all-signin{
+        display: grid;
+        grid-template-columns: repeat(1, 48rem);
+        grid-template-rows: repeat(1, 22rem) repeat(1, 37rem);
+    }
+
+    .signin-image{
+        background-image: url('images/horizental-nibble-image.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .signin-form .welcome-inputs .input-box{
+        margin-bottom: 1rem;
+    }
+    
+}

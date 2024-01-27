@@ -120,3 +120,36 @@
     font-weight: 700;
     color: #FB6D3A;
 }
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+    html{
+        font-size: 10.8px;
+    }
+    .create-account{
+        display: grid;
+        grid-template-columns: repeat(1, 48rem);
+        grid-template-rows: repeat(1, 22rem) repeat(1, 38rem);
+        width: 48rem;
+    }
+
+    .nibble-image{
+        background-image: url('images/horizental-nibble-image.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .create-account-form{
+        grid-row: 2 ;
+    }
+
+    .create-account-form .create-account-inputs .input-box{
+        margin-top: 2rem;
+    }
+
+    .create-account-form .create-account-inputs .input-box img{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+}
