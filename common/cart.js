@@ -96,18 +96,19 @@ function updateCartInfo() {
             if (data.delivery_address) {
                 document.querySelector('#delivery-address').innerText = `${data.delivery_address.street_name} ${data.delivery_address.city}, ${data.delivery_address.state}`
 
-                document.querySelector('#cart-address-street').innerText = data.delivery_address.street_name
-                document.querySelector('#cart-address-city').innerText = data.delivery_address.city
-                document.querySelector('#cart-address-state').innerText = data.delivery_address.state
-                document.querySelector('#cart-address-zipcode').innerText = data.delivery_address.zip_code
+                document.querySelector('#street-name-input').value = data.delivery_address.street_name
+                document.querySelector('#city-name-input').value = data.delivery_address.city
+                document.querySelector('#state-name-input').value = data.delivery_address.state
+                document.querySelector('#zip-code-input').value = data.delivery_address.zip_code
 
             }
             else {
                 document.querySelector('#delivery-address').innerText = ''
-                document.querySelector('#cart-address-street').innerText = ''
-                document.querySelector('#cart-address-city').innerText = ''
-                document.querySelector('#cart-address-state').innerText = ''
-                document.querySelector('#cart-address-zipcode').innerText = ''
+
+                document.querySelector('#street-name-input').value = ''
+                document.querySelector('#city-name-input').value = ''
+                document.querySelector('#state-name-input').value = ''
+                document.querySelector('#zip-code-input').value = ''
             }
 
             if (data.restaurant) {
@@ -160,6 +161,20 @@ function updateCartInfo() {
 
 
 function cartCheckout() {
+
+    const street = document.querySelector('#street-name-input').value;
+    const city = document.querySelector('#city-name-input').value;
+    const state = document.querySelector('#state-name-input').value;
+    const zipcode = document.querySelector('#zip-code-input').value;
+
+    const requestBody = {
+        street_name: street,
+        city: city,
+        state: state,
+        zip_code: zipcode,
+        type: "home"
+    }
+
     const CartDetailUrl = `http://127.0.0.1:8000/api/restaurants/cart/pay/`;
 
     fetch(CartDetailUrl, {
@@ -167,7 +182,8 @@ function cartCheckout() {
             'Authorization': `Bearer ${GetAccessToken()}`,
             'Content-Type': 'application/json',
         },
-        method: "POST"
+        method: "POST",
+        body: JSON.stringify(requestBody)
     })
         .then(response => {
             if (response.status !== 200) {
