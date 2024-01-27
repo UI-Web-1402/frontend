@@ -815,6 +815,37 @@
     font-weight: 900;
 }
 
+.cart-part .discount-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2rem;
+}
+
+.cart-part .discount-part button{
+    background: none;
+    border: 0;
+}
+
+.cart-part .discount-part button:hover{
+    cursor: pointer;
+}
+
+.cart-part .discount-part .field-name{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+#promo-code-input{
+    width: 15rem;
+    height: 2.85rem;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+
 
 .cart-part .order-part{
     display: flex;
