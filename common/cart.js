@@ -127,6 +127,8 @@ function updateCartInfo() {
                 if (data.promo_code) {
                     final_price = total_price_with_delivery - (total_price_with_delivery * (data.promo_code.discount_percentage / 100));
                     final_price = final_price.toFixed(2);
+                    document.querySelector('#promo-code-input').value = data.promo_code.code;
+
                 }
                 else {
                     final_price = total_price_with_delivery.toFixed(2)
@@ -204,3 +206,24 @@ function addFoodToCart(food_id) {
 
 }
 
+
+function ApplyPromoCode() {
+    const promo_code = document.getElementById('promo-code-input').value;
+    fetch(`http://127.0.0.1:8000/api/restaurants/cart/promo/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GetAccessToken()}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({promo_code: promo_code})
+    })
+      .then(response => {
+        if (response.status === 400) {
+          alert("Invalid promo code!")
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+  
