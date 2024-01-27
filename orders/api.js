@@ -1,3 +1,15 @@
+function GetAccessToken() {
+    const accessToken = localStorage.getItem('access_token');
+
+    if (!accessToken) {
+        console.error('Access token not found in local storage');
+        return;
+    }
+    return accessToken;
+}
+
+
+
 function createUpcomingOrderItem(id, code, restaurant, finish_time, total_finish_time) {
     let item =
         `
@@ -395,6 +407,7 @@ function update_previous_order_detail(cart_id) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    getAcitveAddress();
     const accessToken = localStorage.getItem('access_token');
 
     if (!accessToken) {
@@ -465,4 +478,44 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 );
 
+function getAcitveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
 
+function changeActiveAddress(){
+    fetch(`http://127.0.0.1:8000/api/user/account/address/active/`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+        }
+    })
+        .then(response => {
+            if (response.status === 400) {
+                document.querySelector('#active-address').innerText = "Does not have active address";
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.querySelector('#active-address').innerText = `${data.street_name} ${data.city}, ${data.state}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
