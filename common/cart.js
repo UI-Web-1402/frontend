@@ -179,3 +179,28 @@ function cartCheckout() {
 
 }
 
+
+function addFoodToCart(food_id) {
+    const CartDetailUrl = `http://127.0.0.1:8000/api/restaurants/cart/add/${food_id}/`;
+
+
+
+    fetch(CartDetailUrl, {
+        headers: {
+            'Authorization': `Bearer ${GetAccessToken()}`,
+            'Content-Type': 'application/json',
+        },
+        method: "POST"
+    })
+        .then(response => {
+            if (response.status !== 200) {
+                alert("Invalid food for current cart.")
+            }
+            else {
+                updateCartInfo();
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+}
+
