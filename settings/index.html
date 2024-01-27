@@ -445,7 +445,7 @@
 
           <input type="text" name="promo-code-input" id="promo-code-input" />
 
-          <button type="button">
+          <button onclick="ApplyPromoCode(); updateCartInfo()" type="button">
             <img src="icons/add-promo-code-icon.svg" alt="add discount code" />
           </button>
         </div>
@@ -526,7 +526,7 @@
           </div>
         </div>
 
-        <button type="button">Confirm</button>
+        <button onclick="cartCheckout(); event.preventDefault();" type="button">Confirm</button>
       </div>
     </div>
   </body>
